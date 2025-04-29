@@ -1,1 +1,9 @@
-﻿  Cpp-Eindopdracht.vcxproj -> D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\x64\Debug\Cpp-Eindopdracht.exe
+﻿  Main.cpp
+D:\github\Cpp-Hku-Eindopdracht\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'Main.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      D:\github\Cpp-Hku-Eindopdracht\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+  Cpp-Eindopdracht.vcxproj -> D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\x64\Debug\Cpp-Eindopdracht.exe

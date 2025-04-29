@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|solutionrelative:Cpp-Eindopdracht\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|solutionrelative:Cpp-Eindopdracht\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Main.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|solutionrelative:Cpp-Eindopdracht\\Main.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|solutionrelative:Cpp-Eindopdracht\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +26,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Vector2.h",
+              "DocumentMoniker": "D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Vector2.h",
+              "RelativeDocumentMoniker": "Cpp-Eindopdracht\\Vector2.h",
+              "ToolTip": "D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Vector2.h",
+              "RelativeToolTip": "Cpp-Eindopdracht\\Vector2.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-29T12:20:30.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Vector2.cpp",
+              "DocumentMoniker": "D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Vector2.cpp",
+              "RelativeDocumentMoniker": "Cpp-Eindopdracht\\Vector2.cpp",
+              "ToolTip": "D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Vector2.cpp",
+              "RelativeToolTip": "Cpp-Eindopdracht\\Vector2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-29T12:20:33.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Main.h",
               "DocumentMoniker": "D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Main.h",
               "RelativeDocumentMoniker": "Cpp-Eindopdracht\\Main.h",
               "ToolTip": "D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Main.h",
               "RelativeToolTip": "Cpp-Eindopdracht\\Main.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-29T08:16:59.491Z",
               "EditorCaption": ""
@@ -41,7 +75,7 @@
               "RelativeDocumentMoniker": "Cpp-Eindopdracht\\Main.cpp",
               "ToolTip": "D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Main.cpp",
               "RelativeToolTip": "Cpp-Eindopdracht\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-29T08:17:06.913Z",
               "EditorCaption": ""
