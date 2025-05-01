@@ -2,14 +2,15 @@
 class Vector2
 {
 private:
-	int x;
-	int y;
+	float x;
+	float y;
 
 public:
-	Vector2(int xVal, int yVal);
+	Vector2();
+	Vector2(float xVal, float yVal);
 
 	Vector2 operator+(const Vector2& otherVector);
 	Vector2 operator- (const Vector2 & otherVector);
-	int GetX();
-	int GetY();
+	float GetX();
+	float GetY();
 };
