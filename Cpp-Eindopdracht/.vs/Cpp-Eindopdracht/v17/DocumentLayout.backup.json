@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|solutionrelative:Cpp-Eindopdracht\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\PhysicsBody.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|solutionrelative:Cpp-Eindopdracht\\PhysicsBody.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|solutionrelative:Cpp-Eindopdracht\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8908D7D8-60A6-4337-8800-9AFF5E9CF29D}|Cpp-Eindopdracht\\Cpp-Eindopdracht.vcxproj|D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -51,13 +51,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PhysicsBody.cpp",
               "DocumentMoniker": "D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\PhysicsBody.cpp",
               "RelativeDocumentMoniker": "Cpp-Eindopdracht\\PhysicsBody.cpp",
               "ToolTip": "D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\PhysicsBody.cpp",
               "RelativeToolTip": "Cpp-Eindopdracht\\PhysicsBody.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-30T08:14:58.619Z",
               "EditorCaption": ""
@@ -101,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Main.cpp",
               "DocumentMoniker": "D:\\github\\Cpp-Hku-Eindopdracht\\Cpp-Eindopdracht\\Cpp-Eindopdracht\\Main.cpp",
               "RelativeDocumentMoniker": "Cpp-Eindopdracht\\Main.cpp",
