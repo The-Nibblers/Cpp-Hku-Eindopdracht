@@ -1,17 +1,17 @@
 #include "PhysicsBody.h"
 #include <iostream>
 
-PhysicsBody::PhysicsBody(Vector2 _transform, int _gravityModifier, int _mass)
+PhysicsBody::PhysicsBody(Vector2 _transform, float _gravityModifier, float _mass)
 {
 	transform = _transform;
 	gravityModifier = _gravityModifier;
 	mass = _mass;
 }
 
-void PhysicsBody::HandlePhysics()
+void PhysicsBody::HandlePhysics(float deltaTime)
 {
 	ApplyGravity();
-	ApplyVelocity();
+	ApplyVelocity(deltaTime);
 }
 
 Vector2 PhysicsBody::GetPosition()
@@ -34,10 +34,10 @@ void PhysicsBody::ApplyForce(Vector2 target, int Force, Direction direction)
 	Vector2 appliedForce;
 	switch (direction)
 	{
-	case Up:    appliedForce = Vector2(0, Force); break;
-	case Down:  appliedForce = Vector2(0, -Force); break;
-	case Left:  appliedForce = Vector2(-Force, 0); break;
-	case Right: appliedForce = Vector2(Force, 0); break;
+	case Up:    appliedForce = Vector2(0, -Force); break;
+	case Down:  appliedForce = Vector2(0, Force); break;
+	case Left:  appliedForce = Vector2(Force, 0); break;
+	case Right: appliedForce = Vector2(-Force, 0); break;
 	}
 	ApplyAccelleration(appliedForce);
 }
@@ -48,7 +48,7 @@ void PhysicsBody::ApplyAccelleration(Vector2 appliedForce)
 	velocity = Vector2(velocity.GetX() + Accelleration.GetX(), velocity.GetY() + Accelleration.GetY());
 }
 
-void PhysicsBody::ApplyVelocity()
+void PhysicsBody::ApplyVelocity(float deltaTime)
 {
-	transform = Vector2(transform.GetX() + velocity.GetX(), transform.GetY() + velocity.GetY());
+	transform = Vector2(transform.GetX() + velocity.GetX() * deltaTime, transform.GetY() + velocity.GetY() * deltaTime);
 }

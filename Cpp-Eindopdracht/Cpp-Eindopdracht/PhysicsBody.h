@@ -18,13 +18,13 @@ public:
 	Vector2 velocity;
 	Vector2 acelleration;
 
-	int gravityModifier;
-	int mass;
+	float gravityModifier;
+	float mass;
 	//int accellerationTime;
 
-	PhysicsBody(Vector2 _transform, int _gravityModifier, int _mass);
+	PhysicsBody(Vector2 _transform, float _gravityModifier, float _mass);
 
-	void HandlePhysics();
+	void HandlePhysics(float deltaTime);
 	Vector2 GetPosition();
 
 private:
@@ -32,6 +32,6 @@ private:
 	void ApplyFriction();
 	void ApplyForce(Vector2 target, int Force, Direction direction);
 	void ApplyAccelleration(Vector2 appliedForce);
-	void ApplyVelocity();
+	void ApplyVelocity(float deltaTime);
 };
 
