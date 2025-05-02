@@ -21,7 +21,8 @@ Vector2 PhysicsBody::GetPosition()
 
 void PhysicsBody::ApplyGravity()
 {
-	int gravityForce = mass * gravityModifier;
+	float gravityForce = mass * gravityModifier;
+	gravityForce *= 0.1f;
 	ApplyForce(transform, gravityForce, Down);
 }
 
@@ -29,7 +30,7 @@ void PhysicsBody::ApplyFriction()
 {
 }
 
-void PhysicsBody::ApplyForce(Vector2 target, int Force, Direction direction)
+void PhysicsBody::ApplyForce(Vector2 target, float Force, Direction direction)
 {
 	Vector2 appliedForce;
 	switch (direction)

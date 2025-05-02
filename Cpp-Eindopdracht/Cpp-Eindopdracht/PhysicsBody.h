@@ -30,7 +30,7 @@ public:
 private:
 	void ApplyGravity();
 	void ApplyFriction();
-	void ApplyForce(Vector2 target, int Force, Direction direction);
+	void ApplyForce(Vector2 target, float Force, Direction direction);
 	void ApplyAccelleration(Vector2 appliedForce);
 	void ApplyVelocity(float deltaTime);
 };
