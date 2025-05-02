@@ -21,6 +21,16 @@ Vector2 Vector2::operator-(const Vector2& otherVector)
 	return Vector2(x - otherVector.x, y - otherVector.y);
 }
 
+Vector2 Vector2::operator*(const Vector2& otherVector)
+{
+	return Vector2(x * otherVector.x, y * otherVector.y);
+}
+
+Vector2 Vector2::operator/(const Vector2& otherVector)
+{
+	return Vector2(x / otherVector.x, y / otherVector.y);
+}
+
 float Vector2::GetX()
 {
 	return x;

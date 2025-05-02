@@ -8,7 +8,7 @@
 int main()
 {
     Vector2 transform;
-    PhysicsBody newcircle = PhysicsBody(transform, 2, 1);
+    PhysicsBody newcircle = PhysicsBody(transform, 2, 1, 0.1f);
 
     // Create the main window
     sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "SFML window");

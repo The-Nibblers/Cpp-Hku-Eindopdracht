@@ -1,11 +1,12 @@
 #include "PhysicsBody.h"
 #include <iostream>
 
-PhysicsBody::PhysicsBody(Vector2 _transform, float _gravityModifier, float _mass)
+PhysicsBody::PhysicsBody(Vector2 _transform, float _gravityModifier, float _mass, float _frictionModifier)
 {
 	transform = _transform;
 	gravityModifier = _gravityModifier;
 	mass = _mass;
+	frictionModifier = _frictionModifier;
 }
 
 void PhysicsBody::HandlePhysics(float deltaTime)
@@ -26,8 +27,10 @@ void PhysicsBody::ApplyGravity()
 	ApplyForce(transform, gravityForce, Down);
 }
 
-void PhysicsBody::ApplyFriction()
+void PhysicsBody::ApplyFriction(float deltaTime)
 {
+	float damping = std::pow(1.0f - frictionModifier, deltaTime);
+	velocity = velocity * Vector2(damping, damping);
 }
 
 void PhysicsBody::ApplyForce(Vector2 target, float Force, Direction direction)
@@ -51,5 +54,6 @@ void PhysicsBody::ApplyAccelleration(Vector2 appliedForce)
 
 void PhysicsBody::ApplyVelocity(float deltaTime)
 {
+	ApplyFriction(deltaTime);
 	transform = Vector2(transform.GetX() + velocity.GetX() * deltaTime, transform.GetY() + velocity.GetY() * deltaTime);
 }
