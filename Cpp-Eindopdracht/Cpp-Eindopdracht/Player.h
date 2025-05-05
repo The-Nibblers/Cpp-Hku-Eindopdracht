@@ -6,11 +6,14 @@ class Player : public PhysicsBody
 {
 public: 
 	float moveSpeed;
+	int borderSizeY;
+	int bordersizeX;
+	float radius;
 
-	Player(Vector2 _transform, float _gravityModifier, float _mass, float _frictionModifier, float _moveSpeed);
+	Player(Vector2 _transform, float _gravityModifier, float _mass, float _frictionModifier, float _moveSpeed, int _borderSizeX, int _borderSizeY, float _radius);
 	void MoveLeft();
 	void MoveRight();
-
+	void BorderDetection();
 private:
 
 };

@@ -8,15 +8,19 @@
 
 int main()
 {
-    //create gravity test circle
-    Vector2 transform;
-    Player playerInstance = Player(transform, 0, 1, 0.1f, 0.1f);
+    unsigned int borderSizeX = 800;
+    unsigned int borderSizeY = 600;
+    int playerRadius = 50.f;
+
+    //create gravity test circle 
+    Vector2 transform = Vector2(0,500);
+    Player playerInstance = Player(transform, 0, 1, 0.9f, 0.1f, borderSizeX, borderSizeY, playerRadius);
 
 
-    sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "SFML window");
+    sf::RenderWindow window(sf::VideoMode({ borderSizeX, borderSizeY }), "SFML window");
 
     //create circle
-    sf::CircleShape shape(100.f);
+    sf::CircleShape shape(playerRadius);
     shape.setFillColor(sf::Color::Green);
 
 
@@ -46,6 +50,7 @@ int main()
 
         //handle physics of all objects
         playerInstance.HandlePhysics(deltaTime);
+        playerInstance.BorderDetection();
 
         // Update the position of the shape to match the updated position of newcircle
         Vector2 pos = playerInstance.GetPosition();

@@ -12,6 +12,7 @@ PhysicsBody::PhysicsBody(Vector2 _transform, float _gravityModifier, float _mass
 void PhysicsBody::HandlePhysics(float deltaTime)
 {
 	ApplyGravity();
+	ApplyFriction(deltaTime);
 	ApplyVelocity(deltaTime);
 }
 
@@ -54,6 +55,5 @@ void PhysicsBody::ApplyAccelleration(Vector2 appliedForce)
 
 void PhysicsBody::ApplyVelocity(float deltaTime)
 {
-	ApplyFriction(deltaTime);
 	transform = Vector2(transform.GetX() + velocity.GetX() * deltaTime, transform.GetY() + velocity.GetY() * deltaTime);
 }

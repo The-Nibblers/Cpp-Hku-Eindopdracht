@@ -1,11 +1,9 @@
 #pragma once
 class Vector2
 {
-private:
+public:
 	float x;
 	float y;
-
-public:
 	Vector2();
 	Vector2(float xVal, float yVal);
 
