@@ -40,8 +40,8 @@ void PhysicsBody::ApplyForce(Vector2 target, float Force, Direction direction)
 	{
 	case Up:    appliedForce = Vector2(0, -Force); break;
 	case Down:  appliedForce = Vector2(0, Force); break;
-	case Left:  appliedForce = Vector2(Force, 0); break;
-	case Right: appliedForce = Vector2(-Force, 0); break;
+	case Left:  appliedForce = Vector2(-Force, 0); break;
+	case Right: appliedForce = Vector2(Force, 0); break;
 	}
 	ApplyAccelleration(appliedForce);
 }

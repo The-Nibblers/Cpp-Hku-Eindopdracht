@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "Vector2.h"
 #include "PhysicsBody.h"
+#include "Player.h"
 
 #include <iostream>
 #include <string>
@@ -9,7 +10,7 @@ int main()
 {
     //create gravity test circle
     Vector2 transform;
-    PhysicsBody newcircle = PhysicsBody(transform, 2, 1, 0.1f);
+    Player playerInstance = Player(transform, 0, 1, 0.1f, 0.1f);
 
 
     sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "SFML window");
@@ -33,21 +34,21 @@ int main()
         //handle player input
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scan(sf::Keyboard::Key::A))) {
             
-            std::cout << "Moving left!" << std::endl;
+            playerInstance.MoveLeft();
         }
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scan(sf::Keyboard::Key::D))) {
 
-            std::cout << "Moving left!" << std::endl;
+            playerInstance.MoveRight();
         }
 
         //get deltatime
         float deltaTime = clock.restart().asSeconds();
 
         //handle physics of all objects
-        newcircle.HandlePhysics(deltaTime);
+        playerInstance.HandlePhysics(deltaTime);
 
         // Update the position of the shape to match the updated position of newcircle
-        Vector2 pos = newcircle.GetPosition();
+        Vector2 pos = playerInstance.GetPosition();
         sf::Vector2f sfmlPosition(pos.GetX(), pos.GetY());
         shape.setPosition(sfmlPosition);
 
