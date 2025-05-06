@@ -8,12 +8,12 @@ public:
 
 	void UpdateMovement();
 	void BorderDetection();
+	float radius;
 
 private:
 	float moveSpeed;
 	int borderSizeY;
 	int bordersizeX;
-	float radius;
 	bool moveDirection;
 };
 

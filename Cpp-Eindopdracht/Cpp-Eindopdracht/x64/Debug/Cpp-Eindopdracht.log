@@ -6,12 +6,8 @@ D:\github\Cpp-Hku-Eindopdracht\SFML-3.0.0\include\SFML\System\Exception.hpp(41,4
       D:\github\Cpp-Hku-Eindopdracht\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(14,22): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(18,21): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(20,112): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(24,97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(30,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(33,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Parachutist.cpp
-  Generating Code...
+D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(80,22): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(86,30): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
+D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(105,97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(111,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Cpp-Eindopdracht.vcxproj -> D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\x64\Debug\Cpp-Eindopdracht.exe
