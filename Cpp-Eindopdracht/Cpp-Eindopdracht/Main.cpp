@@ -78,6 +78,7 @@ int main()
     unsigned int borderSizeX = 800;
     unsigned int borderSizeY = 600;
     int playerRadius = 50.f;
+    int score{};
 
     //enemy ranges
     float minEnemySizeRange = 30.f;
@@ -111,8 +112,20 @@ int main()
     sf::CircleShape shape(playerRadius);
     shape.setFillColor(sf::Color::Green);
 
+    //create clocks
     sf::Clock clock;
     sf::Clock spawnClock;
+
+    //create text
+    sf::Font font;
+    if (!font.openFromFile("PixelFont.ttf"))
+    {
+        std::cout << "font does NOT work";
+    }
+    sf::Text scoreText(font);
+    scoreText.setCharacterSize(300);
+    scoreText.setString("AHHHHHHHHHHHHHHH");
+    scoreText.setFillColor(sf::Color::Red);
 
     while (window.isOpen())
     {
@@ -161,6 +174,9 @@ int main()
             it->UpdateMovement();
             if (playerInstance.CollisionDetection(playerInstance.transform, it->transform, playerRadius, it->radius)) {
                 it = parachutists.erase(it);
+                score++;
+                //std::string scorestring = std::to_string(score);
+                //scoreText.setString(scorestring);
             }
             else {
                 ++it;
@@ -190,6 +206,10 @@ int main()
 
             window.draw(enemyShape);
         }
+
+        //draw score text
+        window.draw(scoreText);
+
         window.display();
     }
 
