@@ -83,7 +83,7 @@ int main()
     float minEnemySizeRange = 30.f;
     float maxEnemySizeRange = 70.f;
     float minEnemyTransformX = 0;
-    float maxEnemyTransformX = borderSizeX;
+    float maxEnemyTransformX = borderSizeX - 100;
     float minEnemyTransformY = 0;
     float maxEnemyTransfromy = 0;
     float minEnemyGracityModifier = 0.1f;
@@ -155,11 +155,18 @@ int main()
         playerInstance.HandlePhysics(deltaTime);
         playerInstance.BorderDetection();
 
-        for (Parachutist& p : parachutists) {
-            p.HandlePhysics(deltaTime);
-            p.BorderDetection();
-            p.UpdateMovement();
+        for (auto it = parachutists.begin(); it != parachutists.end(); ) {
+            it->HandlePhysics(deltaTime);
+            it->BorderDetection();
+            it->UpdateMovement();
+            if (playerInstance.CollisionDetection(playerInstance.transform, it->transform, playerRadius, it->radius)) {
+                it = parachutists.erase(it);
+            }
+            else {
+                ++it;
+            }
         }
+
 
         // Update the position of the player
         Vector2 playerPos = playerInstance.GetPosition();

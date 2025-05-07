@@ -10,6 +10,7 @@ public:
 	void MoveLeft();
 	void MoveRight();
 	void BorderDetection();
+	bool CollisionDetection(Vector2 obj1, Vector2 obj2, float radius1, float radius2);
 
 private:
 	float moveSpeed;

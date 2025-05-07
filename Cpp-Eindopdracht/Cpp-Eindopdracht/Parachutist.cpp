@@ -11,14 +11,7 @@ Parachutist::Parachutist(Vector2 _transform, float _gravityModifier, float _mass
 
 void Parachutist::UpdateMovement()
 {
-	if (!moveDirection)
-	{
-		ApplyForce(transform, moveSpeed * 0.2f, Right);
-	}
-	else
-	{
-		ApplyForce(transform, moveSpeed * 0.2f, Left);
-	}
+		ApplyForce(transform, moveSpeed * 0.2f, moveDirection ? Left : Right);
 }
 
 void Parachutist::BorderDetection()

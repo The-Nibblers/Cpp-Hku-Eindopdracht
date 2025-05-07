@@ -1,4 +1,6 @@
 #include "Player.h"
+#include <cmath>
+#include <IOstream>
 
 Player::Player(Vector2 _transform, float _gravityModifier, float _mass, float _frictionModifier, float _moveSpeed, int _borderSizeX, int _borderSizeY, float _radius) : PhysicsBody(_transform,_gravityModifier,_mass, _frictionModifier)
 {
@@ -27,5 +29,18 @@ void Player::BorderDetection()
 	if (transform.x >= bordersizeX - (radius * 2)) {
 		velocity = Vector2(0, 0);
 		ApplyForce(transform, 1, Left);
+	}
+}
+
+bool Player::CollisionDetection(Vector2 obj1, Vector2 obj2, float radius1, float radius2)
+{
+	if ((pow(obj2.GetX() - obj1.GetX(), 2) +
+		pow(obj2.GetY() - obj1.GetY(), 2)) <=
+		pow(radius1 + radius2, 2)) {
+		return true;
+	}
+	else
+	{
+		return false;
 	}
 }

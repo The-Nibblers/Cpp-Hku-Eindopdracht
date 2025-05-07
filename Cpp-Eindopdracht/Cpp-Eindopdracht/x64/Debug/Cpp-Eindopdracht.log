@@ -10,4 +10,7 @@ D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(80,22)
 D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(86,30): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
 D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(105,97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(111,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\Cpp-Eindopdracht\Main.cpp(162,92): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Player.cpp
+  Generating Code...
   Cpp-Eindopdracht.vcxproj -> D:\github\Cpp-Hku-Eindopdracht\Cpp-Eindopdracht\x64\Debug\Cpp-Eindopdracht.exe
