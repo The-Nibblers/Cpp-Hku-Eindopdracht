@@ -118,14 +118,14 @@ int main()
 
     //create text
     sf::Font font;
-    if (!font.openFromFile("PixelFont.ttf"))
+    if (!font.openFromFile("D:/github/Cpp-Hku-Eindopdracht/Cpp-Eindopdracht/Fonts/arial.ttf"))
     {
         std::cout << "font does NOT work";
     }
     sf::Text scoreText(font);
-    scoreText.setCharacterSize(300);
-    scoreText.setString("AHHHHHHHHHHHHHHH");
+    scoreText.setCharacterSize(45);
     scoreText.setFillColor(sf::Color::Red);
+    scoreText.setString("0");
 
     while (window.isOpen())
     {
@@ -175,8 +175,8 @@ int main()
             if (playerInstance.CollisionDetection(playerInstance.transform, it->transform, playerRadius, it->radius)) {
                 it = parachutists.erase(it);
                 score++;
-                //std::string scorestring = std::to_string(score);
-                //scoreText.setString(scorestring);
+                std::string scorestring = std::to_string(score);
+                scoreText.setString(scorestring);
             }
             else {
                 ++it;
