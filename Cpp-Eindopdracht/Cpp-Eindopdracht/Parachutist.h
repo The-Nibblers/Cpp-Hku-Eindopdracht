@@ -8,7 +8,11 @@ public:
 
 	void UpdateMovement();
 	void BorderDetection();
+	Vector2 GetPosition() const { return transform; }
 	float radius;
+	int id;
+	static int nextId;
+	bool markedForDeletion = false;
 
 private:
 	float moveSpeed;
@@ -17,3 +21,5 @@ private:
 	bool moveDirection;
 };
 
+// Compare parachutists by ID
+bool operator==(const Parachutist& a, const Parachutist& b);

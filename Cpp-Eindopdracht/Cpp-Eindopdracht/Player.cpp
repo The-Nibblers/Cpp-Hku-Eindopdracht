@@ -22,11 +22,11 @@ void Player::MoveRight()
 
 void Player::BorderDetection()
 {
-	if (transform.x <= 0) {
+	if (transform.x <= (0 + radius) ) {
 		velocity = Vector2(0,0);
 		ApplyForce(transform, 1, Right);
 	}
-	if (transform.x >= bordersizeX - (radius * 2)) {
+	if (transform.x >= bordersizeX - radius) {
 		velocity = Vector2(0, 0);
 		ApplyForce(transform, 1, Left);
 	}

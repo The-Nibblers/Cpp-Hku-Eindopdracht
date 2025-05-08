@@ -46,6 +46,7 @@ Parachutist SpawnParachutist(
     return Parachutist(enemyTransform, gravityMod, mass, friction, speed, borderSizeX, borderSizeY, enemyRadius, moveDir);
 }
 
+
 void AddRandomParachutist(std::vector<Parachutist>& parachutists,
     int borderSizeX, int borderSizeY,
     float minSize, float maxSize,
@@ -70,6 +71,11 @@ void AddRandomParachutist(std::vector<Parachutist>& parachutists,
     parachutists.push_back(newP);
 }
 
+void RemoveParachutistFromVector(std::vector<Parachutist>& vector, const Parachutist& parachutistInstance) {
+    vector.erase(std::remove(vector.begin(), vector.end(), parachutistInstance), vector.end());
+}
+
+
 
 
 
@@ -77,20 +83,21 @@ int main()
 {
     unsigned int borderSizeX = 800;
     unsigned int borderSizeY = 600;
-    int playerRadius = 50.f;
+    float playerRadius = 50.f;
     int score{};
 
+
     //enemy ranges
-    float minEnemySizeRange = 30.f;
-    float maxEnemySizeRange = 70.f;
+    float minEnemySizeRange = 20.f;
+    float maxEnemySizeRange = 50.f;
     float minEnemyTransformX = 0;
     float maxEnemyTransformX = borderSizeX - 100;
     float minEnemyTransformY = 0;
     float maxEnemyTransfromy = 0;
     float minEnemyGracityModifier = 0.1f;
     float maxEnemyGravityModifier = 0.3f;
-    float minEnemyMass = 0.1f;
-    float maxEnemyMass = 1;
+    float minEnemyMass = 1;
+    float maxEnemyMass = 2.5f;
     float minEnemyFrictionModifier = 0;
     float maxEnemyFrictionModifier = 1;
     float minEnemyMoveSpeed = 0.3f;
@@ -101,8 +108,12 @@ int main()
 
     std::vector<Parachutist> parachutists;
 
+    int gameOverCounter = 0;
+    int maxMisses = 5;
+    bool gameOver = false;
+
     //create player
-    Vector2 playerTransform = Vector2(0,500);
+    Vector2 playerTransform = Vector2(borderSizeX / 2,borderSizeY * 0.9f);
     Player playerInstance = Player(playerTransform, 0, 1, 0.9f, 0.1f, borderSizeX, borderSizeY, playerRadius);
 
 
@@ -111,6 +122,8 @@ int main()
     //create player circle
     sf::CircleShape shape(playerRadius);
     shape.setFillColor(sf::Color::Green);
+    sf::Vector2 playerOrgin(playerRadius, playerRadius);
+    shape.setOrigin(playerOrgin);
 
     //create clocks
     sf::Clock clock;
@@ -126,6 +139,11 @@ int main()
     scoreText.setCharacterSize(45);
     scoreText.setFillColor(sf::Color::Red);
     scoreText.setString("0");
+
+    sf::Text gameOverText(font);
+    gameOverText.setCharacterSize(45);
+    gameOverText.setFillColor(sf::Color::Red);
+    gameOverText.setString("Game Over");
 
     while (window.isOpen())
     {
@@ -172,16 +190,24 @@ int main()
             it->HandlePhysics(deltaTime);
             it->BorderDetection();
             it->UpdateMovement();
-            if (playerInstance.CollisionDetection(playerInstance.transform, it->transform, playerRadius, it->radius)) {
+
+            if (it->markedForDeletion) {
+                it = parachutists.erase(it);
+                gameOverCounter++;
+                if (gameOverCounter >= maxMisses) {
+                    gameOver = true;
+                }
+            }
+            else if (playerInstance.CollisionDetection(playerInstance.transform, it->transform, playerRadius, it->radius)) {
                 it = parachutists.erase(it);
                 score++;
-                std::string scorestring = std::to_string(score);
-                scoreText.setString(scorestring);
+                scoreText.setString(std::to_string(score));
             }
             else {
                 ++it;
             }
         }
+
 
 
         // Update the position of the player
@@ -190,25 +216,36 @@ int main()
         shape.setPosition(playerPosition);
 
         window.clear();
+        if (!gameOver)
+        {
+            //draw player
+            window.draw(shape);
 
-        //draw player
-        window.draw(shape);
+            // Draw each parachutist
+            for (Parachutist& p : parachutists) {
+                float radius = p.radius;
+                sf::CircleShape enemyShape(radius);
+                enemyShape.setFillColor(sf::Color::Blue);
 
-        // Draw each parachutist
-        for (Parachutist& p : parachutists) {
-            float radius = p.radius;
-            sf::CircleShape enemyShape(radius);
-            enemyShape.setFillColor(sf::Color::Blue);
+                sf::Vector2 enemyOrgin(radius, radius);
+                enemyShape.setOrigin(enemyOrgin);
 
-            Vector2 enemyPos = p.GetPosition();
-            sf::Vector2f enemyPosition(enemyPos.GetX(), enemyPos.GetY());
-            enemyShape.setPosition(enemyPosition);
+                Vector2 enemyPos = p.GetPosition();
+                sf::Vector2f enemyPosition(enemyPos.GetX(), enemyPos.GetY());
+                enemyShape.setPosition(enemyPosition);
 
-            window.draw(enemyShape);
+                window.draw(enemyShape);
+            }
+
+            //draw score text
+            window.draw(scoreText);
         }
-
-        //draw score text
-        window.draw(scoreText);
+        else {
+            sf::Vector2f gameOverTextPos(borderSizeX * 0.5f, borderSizeY * 0.5f);
+            gameOverText.setPosition(gameOverTextPos);
+            window.draw(gameOverText);
+            window.draw(scoreText);
+        }
 
         window.display();
     }
