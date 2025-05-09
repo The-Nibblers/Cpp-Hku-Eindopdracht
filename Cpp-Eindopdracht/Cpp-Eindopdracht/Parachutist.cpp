@@ -16,19 +16,19 @@ Parachutist::Parachutist(Vector2 _transform, float _gravityModifier, float _mass
 
 void Parachutist::UpdateMovement()
 {
-	ApplyForce(transform, moveSpeed * 0.2f, moveDirection ? Left : Right);
+	ApplyForce(moveSpeed * 0.2f, moveDirection ? Left : Right);
 }
 
 void Parachutist::BorderDetection()
 {
 	if (transform.x <= (0 + radius)) {
 		velocity = Vector2(0, 0);
-		ApplyForce(transform, 1, Right);
+		ApplyForce(1, Right);
 		moveDirection = false;
 	}
 	if (transform.x >= bordersizeX - radius) {
 		velocity = Vector2(0, 0);
-		ApplyForce(transform, 1, Left);
+		ApplyForce(1, Left);
 		moveDirection = true;
 	}
 	if (transform.y >= borderSizeY) {

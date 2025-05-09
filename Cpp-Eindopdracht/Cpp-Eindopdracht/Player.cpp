@@ -12,23 +12,23 @@ Player::Player(Vector2 _transform, float _gravityModifier, float _mass, float _f
 
 void Player::MoveLeft()
 {
-	ApplyForce(transform, moveSpeed, Left);
+	ApplyForce(moveSpeed, Left);
 }
 
 void Player::MoveRight()
 {
-	ApplyForce(transform, moveSpeed, Right);
+	ApplyForce(moveSpeed, Right);
 }
 
 void Player::BorderDetection()
 {
 	if (transform.x <= (0 + radius) ) {
 		velocity = Vector2(0,0);
-		ApplyForce(transform, 1, Right);
+		ApplyForce(1, Right);
 	}
 	if (transform.x >= bordersizeX - radius) {
 		velocity = Vector2(0, 0);
-		ApplyForce(transform, 1, Left);
+		ApplyForce(1, Left);
 	}
 }
 

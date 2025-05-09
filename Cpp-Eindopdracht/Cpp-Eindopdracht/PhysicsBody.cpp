@@ -25,7 +25,7 @@ void PhysicsBody::ApplyGravity()
 {
 	float gravityForce = mass * gravityModifier;
 	gravityForce *= 0.1f;
-	ApplyForce(transform, gravityForce, Down);
+	ApplyForce(gravityForce, Down);
 }
 
 void PhysicsBody::ApplyFriction(float deltaTime)
@@ -34,7 +34,7 @@ void PhysicsBody::ApplyFriction(float deltaTime)
 	velocity = velocity * Vector2(damping, damping);
 }
 
-void PhysicsBody::ApplyForce(Vector2 target, float Force, Direction direction)
+void PhysicsBody::ApplyForce(float Force, Direction direction)
 {
 	Vector2 appliedForce;
 	switch (direction)

@@ -26,7 +26,7 @@ public:
 	PhysicsBody(Vector2 _transform, float _gravityModifier, float _mass, float _frictionModifier);
 
 	void HandlePhysics(float deltaTime);
-	void ApplyForce(Vector2 target, float Force, Direction direction);
+	void ApplyForce(float Force, Direction direction);
 	Vector2 GetPosition();
 
 private:
